@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vanguard Commercial — Commercial Real Estate Listings</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- 1. NAVIGATION BAR -->
+    <header>
+        <div class="nav-container">
+            <div class="nav-left">
+                <a href="#" class="logo">
+                    <div class="logo-icon">
+                        <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14zM7 10h2v7H7zm4-3h2v10h-2zm4 5h2v5h-2z"/></svg>
+                    </div>
+                    Vanguard Commercial
+                </a>
+                <ul class="nav-links">
+                    <li><a href="#" class="active">Properties</a></li>
+                    <li><a href="#">Markets</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Insights</a></li>
+                    <li><a href="#">About</a></li>
+                </ul>
+            </div>
+            <div class="nav-right">
+                <a href="#" class="text-link">List a Property</a>
+                <span class="phone-link">1-800-VANGUARD</span>
+                <a href="#" class="text-link">Sign In</a>
+                <button class="cta-button">Contact Us</button>
+                <button class="hamburger">&#9776;</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- 2. PAGE HEADER & SEARCH BAR -->
+    <section class="page-header">
+        <div class="header-content">
+            <h1>Commercial Properties for Lease & Sale</h1>
+            <p>Browse 2,400+ listings across 35 U.S. markets</p>
+            
+            <div class="search-container">
+                <div class="search-field">
+                    <label>Location</label>
+                    <input type="text" value="Austin, TX" placeholder="City, ZIP, or neighborhood">
+                </div>
+                <div class="search-field">
+                    <label>Property Type</label>
+                    <select>
+                        <option>All Types</option>
+                        <option selected>Office</option>
+                        <option>Retail</option>
+                        <option>Industrial</option>
+                        <option>Flex</option>
+                        <option>Land</option>
+                        <option>Mixed-Use</option>
+                    </select>
+                </div>
+                <div class="search-field">
+                    <label>Transaction</label>
+                    <select>
+                        <option selected>For Lease & Sale</option>
+                        <option>For Lease</option>
+                        <option>For Sale</option>
+                        <option>For Sublease</option>
+                    </select>
+                </div>
+                <button class="search-btn">Search</button>
+            </div>
+
+            <div class="quick-chips">
+                <div class="chip active">Coworking Ready</div>
+                <div class="chip">Move-in Ready</div>
+                <div class="chip">New Construction</div>
+                <div class="chip">Sublease Available</div>
+                <div class="chip">Green Certified</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MAIN CONTAINER WITH FILTER SIDEBAR & RESULTS -->
+    <div class="main-layout-container">
+        
+        <!-- 4. FILTER SIDEBAR -->
+        <aside class="filter-sidebar">
+            <div class="filter-header">
+                <h3>Filters</h3>
+                <button class="clear-filters">Clear All Filters</button>
+            </div>
+
+            <div class="filter-group">
+                <div class="filter-group-title">Property Type</div>
+                <label class="checkbox-label"><div class="checkbox-left"><input type="checkbox" checked>Office</div><span class="filter-count">142</span></label>
+                <label class="checkbox-label"><div class="checkbox-left"><input type="checkbox" checked>Retail</div><span class="filter-count">58</span></label>
+                <label class="checkbox-label"><div class="checkbox-left"><input type="checkbox" checked>Industrial</div><span class="filter-count">31</span></label>
+                <label class="checkbox-label"><div class="checkbox-left"><input type="checkbox">Flex</div><span class="filter-count">12</span></label>
+                <label class="checkbox-label"><div class="checkbox-left"><input type="checkbox">Land</div><span class="filter-count">5</span></label>
+            </div>
+
+            <div class="filter-group">
+                <div class="filter-group-title">Price Range ($/SF/yr)</div>
+                <div class="range-inputs">
+                    <input type="text" placeholder="Min $15">
+                    <span style="color: var(--text-muted);">to</span>
+                    <input type="text" placeholder="Max $85">
+                </div>
+            </div>
+
+            <div class="filter-group">
+                <div class="filter-group-title">Size (SF)</div>
+                <div class="range-inputs">
+                    <input type="text" placeholder="500 SF">
+                    <span style="color: var(--text-muted);">to</span>
+                    <input type="text" placeholder="100,000+ SF">
+                </div>
+            </div>
+
+            <div class="filter-group">
+                <div class="filter-group-title">Building Class</div>
+                <label class="checkbox-label"><div class="checkbox-left"><input type="checkbox" checked>Class A</div><span class="filter-count">89</span></label>
+                <label class="checkbox-label"><div class="checkbox-left"><input type="checkbox" checked>Class B</div><span class="filter-count">112</span></label>
+                <label class="checkbox-label"><div class="checkbox-left"><input type="checkbox">Class C</div><span class="filter-count">47</span></label>
+            </div>
+
+            <div class="filter-group">
+                <div class="filter-group-title">Year Built</div>
+                <label class="checkbox-label"><div class="checkbox-left"><input type="checkbox">Before 2000</div></label>
+                <label class="checkbox-label"><div class="checkbox-left"><input type="checkbox" checked>2000-2010</div></label>
+                <label class="checkbox-label"><div class="checkbox-left"><input type="checkbox" checked>2010-2020</div></label>
+                <label class="checkbox-label"><div class="checkbox-left"><input type="checkbox" checked>2020+</div></label>
+            </div>
+
+            <div class="filter-group">
+                <div class="filter-group-title">Amenities</div>
+                <label class="checkbox-label"><div class="checkbox-left"><input type="checkbox" checked>Parking Included</div></label>
+                <label class="checkbox-label"><div class="checkbox-left"><input type="checkbox">On-Site Management</div></label>
+                <label class="checkbox-label"><div class="checkbox-left"><input type="checkbox" checked>Fiber Internet</div></label>
+                <label class="checkbox-label"><div class="checkbox-left"><input type="checkbox">Loading Docks</div></label>
+                <label class="checkbox-label"><div class="checkbox-left"><input type="checkbox">Conference Rooms</div></label>
+                <label class="checkbox-label"><div class="checkbox-left"><input type="checkbox">Rooftop Access</div></label>
+                <label class="checkbox-label"><div class="checkbox-left"><input type="checkbox">EV Charging</div></label>
+            </div>
+
+            <div class="filter-group">
+                <div class="filter-group-title">Certifications</div>
+                <label class="checkbox-label"><div class="checkbox-left"><input type="checkbox">LEED Certified</div></label>
+                <label class="checkbox-label"><div class="checkbox-left"><input type="checkbox">ENERGY STAR</div></label>
+                <label class="checkbox-label"><div class="checkbox-left"><input type="checkbox">WELL Building</div></label>
+            </div>
+        </aside>
+
+        <!-- RESULTS CONTENT -->
+        <main class="results-section">
+            
+            <!-- 3. RESULTS TOOLBAR -->
+            <div class="results-toolbar">
+                <div class="result-count">248 properties found in Austin, TX</div>
+                <div class="toolbar-right">
+                    <button class="toolbar-btn"><span>🔔</span> Save Search</button>
+                    <button class="toolbar-btn"><span>🗺️</span> Draw on Map</button>
+                    <select class="sort-dropdown">
+                        <option>Sort by: Newest</option>
+                        <option>Price (Low-High)</option>
+                        <option>Price (High-Low)</option>
+                        <option>Size (Small-Large)</option>
+                        <option>Size (Large-Small)</option>
+                    </select>
+                    <div class="view-toggle">
+                        <button class="view-btn active">Grid</button>
+                        <button class="view-btn">List</button>
+                        <button class="view-btn">Map</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 5. PROPERTY LISTING CARDS -->
+            <div class="property-grid">
+                
+                <!-- Card 1 -->
+                <div class="property-card">
+                    <div class="card-img-container">
+                        <div class="card-badges">
+                            <span class="badge badge-lease">For Lease</span>
+                            <span class="badge badge-class-a">Class A</span>
+                        </div>
+                        Frost Tower — Glass Exterior
+                    </div>
+                    <div class="card-body">
+                        <h3 class="property-title">Frost Tower — Suite 2400</h3>
+                        <p class="property-address">401 Congress Ave, Austin, TX 78701</p>
+                        <div class="property-specs">
+                            <span>12,500 SF</span> · <span>24th Floor</span> · <span>Built 2003</span>
+                        </div>
+                        <div class="property-price-row">
+                            <span class="property-price-main">$52.00 /SF/year</span>
+                            <span class="property-price-sub">$54,167/mo</span>
+                        </div>
+                        <div class="property-tags">
+                            <span class="property-tag">Full-Floor</span>
+                            <span class="property-tag">City Views</span>
+                            <span class="property-tag">Spec Suite</span>
+                        </div>
+                        <p class="broker-info">Listed by Sarah Chen, Vanguard Commercial</p>
+                        <div class="card-footer">
+                            <div class="card-action-icons">
+                                <button class="icon-btn" title="Save">♡</button>
+                                <button class="icon-btn" title="Schedule Tour">📅</button>
+                            </div>
+                            <a href="#" class="details-link">Details →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="property-card">
+                    <div class="card-img-container">
+                        <div class="card-badges">
+                            <span class="badge badge-lease">For Lease</span>
+                            <span class="badge badge-retail">Retail</span>
+                        </div>
+                        Domain NORTHSIDE — Retail Pad
+                    </div>
+                    <div class="card-body">
+                        <h3 class="property-title">Domain NORTHSIDE — Pad 8</h3>
+                        <p class="property-address">11600 Domain Dr, Austin, TX 78758</p>
+                        <div class="property-specs">
+                            <span>3,200 SF</span> · <span>Ground Floor</span> · <span>Endcap</span>
+                        </div>
+                        <div class="property-price-row">
+                            <span class="property-price-main">$42.00 /SF/yr NNN</span>
+                            <span class="property-price-sub">$11,200/mo</span>
+                        </div>
+                        <div class="property-tags">
+                            <span class="property-tag">High Traffic</span>
+                            <span class="property-tag">Patio Available</span>
+                            <span class="property-tag">Restaurant Ready</span>
+                        </div>
+                        <p class="broker-info">Listed by Marcus Rivera, Vanguard Commercial</p>
+                        <div class="card-footer">
+                            <div class="card-action-icons">
+                                <button class="icon-btn" title="Save">♡</button>
+                                <button class="icon-btn" title="Schedule Tour">📅</button>
+                            </div>
+                            <a href="#" class="details-link">Details →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="property-card">
+                    <div class="card-img-container">
+                        <div class="card-badges">
+                            <span class="badge badge-sale">For Sale</span>
+                            <span class="badge badge-industrial">Industrial</span>
+                        </div>
+                        East Austin Distribution Center
+                    </div>
+                    <div class="card-body">
+                        <h3 class="property-title">East Austin Distribution Center</h3>
+                        <p class="property-address">4800 E 7th St, Austin, TX 78702</p>
+                        <div class="property-specs">
+                            <span>45,000 SF</span> · <span>24' Clear</span> · <span>4 Docks</span>
+                        </div>
+                        <div class="property-price-row">
+                            <span class="property-price-main">$6,750,000</span>
+                            <span class="property-price-sub">$150 /SF</span>
+                        </div>
+                        <div class="property-tags">
+                            <span class="property-tag">Fenced Yard</span>
+                            <span class="property-tag">Sprinklered</span>
+                            <span class="property-tag">Rail Adjacent</span>
+                        </div>
+                        <p class="broker-info">Listed by Tom Bradley, Vanguard Commercial</p>
+                        <div class="card-footer">
+                            <div class="card-action-icons">
+                                <button class="icon-btn" title="Save">♡</button>
+                                <button class="icon-btn" title="Schedule Tour">📅</button>
+                            </div>
+                            <a href="#" class="details-link">Details →</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- 7. FEATURED LISTINGS BANNER -->
+            <div class="featured-banner">
+                <div class="featured-img">
+                    The Austin Tech Center — Campus
+                </div>
+                <div class="featured-content">
+                    <div class="featured-label">Featured Flagship Listing</div>
+                    <h3>The Austin Tech Center — Full Building</h3>
+                    <div class="featured-specs">185,000 SF · Class A · LEED Platinum · Built 2021</div>
+                    <p class="featured-desc">Flagship campus opportunity in East Austin's booming tech corridor. Features 10,000 SF rooftop amenity deck, 500-space parking garage, and campus-grade fiber connectivity. Divisible to 15,000 SF.</p>
+                    <div style="display: flex; align-items: baseline; gap: 12px; margin-bottom: 16px;">
+                        <span style="font-size: 22px; font-weight: 700; color: var(--espresso);">$58.00 /SF/year</span>
+                        <span style="font-size: 13px; color: var(--text-muted);">Base Rent</span>
+                    </div>
+                    <button class="cta-button">Schedule a Tour</button>
+                </div>
+            </div>
+
+            <!-- PAGINATION -->
+            <div class="pagination-container">
+                <span>Showing 1-12 of 248 properties</span>
+                <div class="pagination-numbers">
+                    <button class="page-num active">1</button>
+                    <button class="page-num">2</button>
+                    <button class="page-num">3</button>
+                    <button class="page-num">4</button>
+                    <button class="page-num">›</button>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <!-- 8. MARKET INSIGHTS STRIP -->
+    <section class="market-insights">
+        <div class="market-insights-container">
+            <div class="market-header">
+                <h2>Austin Market Snapshot — Q1 2026</h2>
+                <a href="#">Download Full Market Report →</a>
+            </div>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-title">Office Vacancy</div>
+                    <div class="stat-value">14.2%</div>
+                    <div class="stat-trend down">↓ 0.8% from Q4</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-title">Avg. Office Rent</div>
+                    <div class="stat-value">$48.50</div>
+                    <div class="stat-trend">/SF (↑ 3.2% YoY)</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-title">Retail Absorption</div>
+                    <div class="stat-value">+320k</div>
+                    <div class="stat-trend">SF in Q1</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-title">Industrial Cap Rate</div>
+                    <div class="stat-value">5.8%</div>
+                    <div class="stat-trend" style="color: var(--text-muted);">Stable</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. LEAD CAPTURE / CONTACT SECTION -->
+    <section class="lead-section">
+        <div class="lead-container">
+            <div class="lead-form">
+                <h2>Can't Find What You're Looking For?</h2>
+                <p>Our team covers every submarket in Austin. Tell us what you need and we'll source off-market opportunities.</p>
+                <form>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label>Full Name</label>
+                            <input type="text" placeholder="John Doe">
+                        </div>
+                        <div class="form-group">
+                            <label>Company</label>
+                            <input type="text" placeholder="Acme Corp">
+                        </div>
+                        <div class="form-group">
+                            <label>Email</label>
+                            <input type="email" placeholder="john@acme.com">
+                        </div>
+                        <div class="form-group">
+                            <label>Phone</label>
+                            <input type="tel" placeholder="(512) 555-0199">
+                        </div>
+                        <div class="form-group">
+                            <label>Property Type</label>
+                            <select>
+                                <option>Office</option>
+                                <option>Retail</option>
+                                <option>Industrial</option>
+                                <option>Flex</option>
+                                <option>Land</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Size Needed</label>
+                            <select>
+                                <option>Under 2,000 SF</option>
+                                <option>2,000 - 5,000 SF</option>
+                                <option>5,000 - 15,000 SF</option>
+                                <option>15,000 - 50,000 SF</option>
+                                <option>50,000+ SF</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group full">
+                        <label>Additional Notes or Requirements</label>
+                        <textarea placeholder="Specify parking needs, loading docks, power specs, or specific submarkets..."></textarea>
+                    </div>
+                    <button type="submit" class="cta-button" style="width: 100%; padding: 14px; font-size: 15px;">Submit Requirement</button>
+                    <p class="privacy-note">Your information is confidential and never shared with third parties.</p>
+                </form>
+            </div>
+            
+            <div class="broker-team-side">
+                <h3>Your Austin Team</h3>
+                
+                <div class="broker-profile">
+                    <div class="broker-avatar">SC</div>
+                    <div class="broker-details">
+                        <h4>Sarah Chen</h4>
+                        <p>Managing Director, Office</p>
+                        <div class="broker-contact">sarah@vanguard.com</div>
+                    </div>
+                </div>
+
+                <div class="broker-profile">
+                    <div class="broker-avatar">MR</div>
+                    <div class="broker-details">
+                        <h4>Marcus Rivera</h4>
+                        <p>Senior VP, Retail</p>
+                        <div class="broker-contact">marcus@vanguard.com</div>
+                    </div>
+                </div>
+
+                <div class="broker-profile">
+                    <div class="broker-avatar">TB</div>
+                    <div class="broker-details">
+                        <h4>Tom Bradley</h4>
+                        <p>Director, Industrial</p>
+                        <div class="broker-contact">tom@vanguard.com</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 10. FOOTER -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-col">
+                <h4>Properties</h4>
+                <ul>
+                    <li><a href="#">Office Listings</a></li>
+                    <li><a href="#">Retail Listings</a></li>
+                    <li><a href="#">Industrial Listings</a></li>
+                    <li><a href="#">Flex Properties</a></li>
+                    <li><a href="#">Land & Development</a></li>
+                    <li><a href="#">All Listings</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="#">Tenant Representation</a></li>
+                    <li><a href="#">Landlord Leasing</a></li>
+                    <li><a href="#">Investment Sales</a></li>
+                    <li><a href="#">Property Management</a></li>
+                    <li><a href="#">Strategic Consulting</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Markets</h4>
+                <ul>
+                    <li><a href="#">Austin, TX</a></li>
+                    <li><a href="#">Dallas, TX</a></li>
+                    <li><a href="#">Houston, TX</a></li>
+                    <li><a href="#">San Antonio, TX</a></li>
+                    <li><a href="#">Denver, CO</a></li>
+                    <li><a href="#">Phoenix, AZ</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Our Leadership Team</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Market Insights</a></li>
+                    <li><a href="#">Press & Media</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Vanguard Commercial</h4>
+                <p style="font-size: 13px; color: #D3C5BC; margin-bottom: 16px;">The premier commercial real estate brokerage platform for institutional and high-growth tenants, landlords, and investors across major U.S. metros.</p>
+                <p style="font-size: 12px; color: #D3C5BC;">Texas Real Estate Commission — License #987654</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 Vanguard Commercial Real Estate. All rights reserved.</p>
+            <p>© 2026 DESIGNED BY NOVA/ENG.YUSEFF ELDEEP.</p>
+            <div class="footer-legal-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Licensing & Disclosures</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

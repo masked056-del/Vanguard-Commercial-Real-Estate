@@ -1,0 +1,1 @@
+/*this is a file if the customer wants to add any details to the project, they can add it here. This file will be used to store any additional information or configurations that the customer may want to include in the project. It can be used to customize the project according to the customer's needs and preferences.*/
